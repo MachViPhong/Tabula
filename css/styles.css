@@ -396,3 +396,83 @@ li {
   font-weight: 500;
   color: #191919;
 }
+
+.footer {
+  background-color: #aa017e;
+  height: 530px;
+}
+.footer .container-fluid {
+  height: 100%;
+  background: url(../img/footer_background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer .container-fluid .container .container-row .row {
+  color: #ffffff;
+}
+.footer .container-fluid .container .container-row .row .col .content .footer-link h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  padding-bottom: 20px;
+}
+.footer .container-fluid .container .container-row .row .col .content .footer-link .ft-link {
+  padding: 0;
+  margin: 0;
+}
+.footer .container-fluid .container .container-row .row .col .content .footer-link .ft-link li {
+  padding-top: 10px;
+}
+.footer .container-fluid .container .container-row .row .col .content .footer-link .ft-link li a {
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.footer .container-fluid .container .container-row .row .col .content .footer-link .social-share-inner .social-share {
+  padding: 30px 0 0 0;
+  margin: 0;
+  display: flex;
+}
+.footer .container-fluid .container .container-row .row .col .content .footer-link .social-share-inner .social-share .icon {
+  padding-right: 10px;
+}
+.footer .container-fluid .container .container-row .row .col .content .footer-link .social-share-inner .social-share .icon a {
+  color: #ffffff;
+  transition: all 0.5s;
+}
+.footer .container-fluid .container .container-row .row .col .content .footer-link .social-share-inner .social-share .icon a:hover {
+  color: #191919;
+}
+.footer .container-fluid .container .container-row .row .col .content h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  padding-bottom: 20px;
+}
+.footer .container-fluid .container .container-row .row .col .content .list .ft-link {
+  padding: 0;
+  margin: 0;
+}
+.footer .container-fluid .container .container-row .row .col .content .list .ft-link li {
+  width: 75px;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.footer .container-fluid .container .container-row .row .col .content .list .ft-link li a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  transition: all 0.5s;
+}
+.footer .container-fluid .container .container-row .row .col .content .list .ft-link li a:hover {
+  color: rgba(241, 180, 180, 0.863);
+}
+.footer .container-fluid .container .container-row .row .col .content .listlast .ft-link {
+  padding: 0;
+  margin: 0;
+}

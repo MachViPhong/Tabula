@@ -5,6 +5,7 @@ $text-c1-brown: #2d1818;
 
 $bg-c1-brown: #2d1818;
 $bg-c1-pink: #b61984;
+$bg-c1-purple: #aa017e;
 
 // * {
 //   padding: 0;
@@ -502,6 +503,112 @@ li {
               }
               .card-text {
                 @include text($text-xs-1, $text-weight-5, $text-c1-dark);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $bg-c1-purple;
+  height: 530px;
+  .container-fluid {
+    height: 100%;
+    background: url(../img/footer_background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .container {
+      .container-row {
+        .row {
+          color: $text-c1-light;
+          .col {
+            .content {
+              .footer-link {
+                h4 {
+                  @include text($text-md-2, $text-weight-7, $text-c1-light);
+                  padding-bottom: 20px;
+                }
+                .ft-link {
+                  padding: 0;
+                  margin: 0;
+                  li {
+                    padding-top: 10px;
+                    i {
+                      
+                    }
+                    a {
+                      padding-left: 10px;
+                      @include text($text-xs-3, $text-weight-4, $text-c1-light);
+                    }
+                  }
+                }
+
+                .social-share-inner {
+                  .social-share {
+                    padding: 30px 0 0 0;
+                    margin: 0;
+                    display: flex;
+
+                    .icon {
+                      padding-right: 10px;
+                      a {
+                        color: $text-c1-light;
+                        transition: all 0.5s;
+                        &:hover{
+                          color: $text-c1-dark;
+                        }
+                        i {
+                          
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              h4{
+                @include text($text-md-2, $text-weight-7, $text-c1-light);
+                padding-bottom: 20px;
+              }
+              .list {
+                .ft-link {
+                  padding: 0;
+                  margin: 0;
+                  li {
+                    width: 75px;
+                    padding: 0.5rem 0;
+                    border-bottom: 1px solid rgba(0,0,0,.1);
+                    a {
+                      @include text($text-xs-3, $text-weight-4, $text-c1-light);
+                      transition: all 0.5s;
+                     &:hover{
+                      color: rgba(241, 180, 180, 0.863);
+                     }
+                    }
+                  }
+                }
+              }
+              .listlast{
+                .ft-link{
+                  padding: 0;
+                  margin: 0;
+                  li{
+                    input{
+  
+                    }
+                    .subcribe{
+  
+                    }
+                  }
+                }
+                
               }
             }
           }
