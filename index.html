@@ -84,9 +84,9 @@
         </div>
         <!-- Offcanvas menu end -->
         <div class="background-img">
-            <img src="./img/yellow_top_wave_01.png" alt="yellow_top_wave_01">
+            <img  src="./img/yellow_top_wave_01.png" alt="yellow_top_wave_01">
         </div>
-        <div class="container">
+        <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light bg-white custom-navbar">
 
                 <!-- Toggle Button -->
@@ -98,7 +98,7 @@
                 <!-- Toggle Button End-->
 
                 <!-- Logo -->
-                <a href="#header" class="navbar-brand d-block">
+                <a href="#header" class="navbar-brand d-block" id="logo-delete">
                     <img src="./img/crest.png" alt="CREST LOGO">
                 </a>
                 <!-- Logo End -->
@@ -292,7 +292,7 @@
                                 </div>
                             </li>
                             <li class="nav-item mx-3">
-                                <a href="#" class="nav-link not-active ">Elements</a>
+                                <a href="#" class="nav-link not-active  ">Elements</a>
                                 <div class="dropdown special s2">
                                     <div class="content">
                                         <ul class="submenu right">
@@ -540,7 +540,77 @@
     </section>
 
 
-    <section class="course"></section>
+    <section class="course">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col col1 col-12 col-sm-12 col-md-12 col-lg-6">
+                        <img class="w-100" src="./img/conatct_inner.png" alt="conatct_inner">
+                    </div>
+                    <div class="col col2 col-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="form">
+                            <div class="title">
+                                <h1>Find Your Course</h1>
+                            </div>
+                            <div class="body">
+                                <div class="row row1">
+                                    <div class="col col-6 name-form">
+                                        <span class="icon">
+                                            <i class="fa fa-user-tie"></i>
+                                        </span>
+                                        <span class="name">
+                                            <input type="text" placeholder="Name">
+                                        </span>
+                                    </div>
+                                    <div class="col col-6 email-form">
+                                        <span class="icon">
+                                            <i class="fa fa-envelope"></i>
+                                        </span>
+                                        <span class="email">
+                                            <input type="text" placeholder="E-mail">
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="row row2">
+                                    <div class="col col-12 Eng-form">
+                                        <span class="icon">
+                                            <i class="fa fa-user-graduate"></i>
+                                        </span>
+                                        <span class="Eng">
+                                            <select name="Your option" id="Eng">
+                                                <option value="English">English</option>
+                                                <option value="French">French</option>
+                                                <option value="Spanish">Spanish</option>
+                                                <option value="German">German</option>
+                                            </select>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="row row3">
+                                    <div class="col col-12 Mess-form">
+                                        <span class="icon">
+                                            <i class="fa fa-comment-alt"></i>
+                                        </span>
+                                        <span class="Mess">
+                                            <textarea name="" id="" cols="30" rows="2" placeholder="Message"></textarea>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="send">
+                                <a href="#">SEND</a>
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer" id="footer">
         <div class="container-fluid">
             <div class="container">
@@ -628,12 +698,11 @@
                                 <div class="listlast">
                                     <ul class="ft-link">
                                         <li>
-                                            <input type="button" value="" class="yourmail" placeholder="Your email">
+                                            <input type="text"class="yourmail" placeholder="Your email">
                                         </li>
                                         <li>
                                             <div class="subcribe">
-
-                                                <button>SUBSCRIBE</button>
+                                                <a href="#footer">SUBSCRIBE</a>
 
                                             </div>
                                         </li>
@@ -676,6 +745,23 @@
             }
             e.stopPropagation();
         })
+
+
+        // var deleteLogo = document.getElementById('toggleButton');
+        // deleteLogo.onclick = function(){
+        //     var logoDeleted = document.getElementById('logo-delete');
+        //     var counter = 0;
+        //     if(counter === 1){
+        //         logoDeleted.className = 'navbar-brand d-none';
+        //         counter--;
+        //     }
+        //     else if(counter === 0){
+        //         logoDeleted.className = 'navbar-brand d-block';
+        //         counter++;
+        //     }
+            
+        // }
+
     </script>
 </body>
 

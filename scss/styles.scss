@@ -123,6 +123,8 @@ li {
 
 // Custom Navigation Bar
 .header {
+  // max-width: 1440px;
+  width: 100%;
   #offCanvas {
     display: flex;
     flex-direction: column;
@@ -197,20 +199,32 @@ li {
     position: relative;
     img {
       width: 100%;
+      @media screen and (max-width: 992px) {
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        left: 0;
+      }
     }
   }
-  .container {
-    max-width: 1280px;
-    margin: auto;
+  .container-fluid{
+    max-width: 1440px;
+    margin: 0;
     position: absolute;
+    z-index: 100;
     top: 0;
-    left: 15%;
-
+    left: 0;
+    padding: 0;
+    @media screen and (max-width: 1200px) {
+      // position: static;
+    }
     @media screen and (max-width: 992px) {
+      position: static;
+      top: 0;
       left: 0;
     }
     @media (min-width: 992px) and (max-width: 1600px) {
-      left: 5%;
+      // left: 5%;
     }
     .custom-navbar {
       justify-content: space-between;
@@ -235,29 +249,37 @@ li {
         }
       }
       #navbarNav {
+       
         .navbarNav-inner {
           display: flex;
           justify-content: space-around;
           align-items: center;
           .navbar-nav {
+            transition: all 0.5s;
             .nav-item {
               &:hover {
                 .dropdown {
+                  z-index: 9;
                   opacity: 1;
+                  &.special{
+                    display: flex;
+                  }
                 }
 
                 .nav-link.not-active::after {
-                  display: block;
-                  animation: zoom-out 0.5s;
-                  @keyframes zoom-out {
-                    0% {
-                      transform: scale(0);
-                    }
+                  // display: block;
+                  opacity: 1;
+                  transform: scale(1.4) !important;
+                  // animation: zoom-out 0.5s;
+                  // @keyframes zoom-out {
+                  //   0% {
+                  //     transform: scale(0);
+                  //   }
 
-                    100% {
-                      transform: scale(1.4);
-                    }
-                  }
+                  //   100% {
+                  //     transform: scale(1.4);
+                  //   }
+                  // }
                 }
                 .nav-link.active::after {
                   transform: scale(1.4);
@@ -271,7 +293,8 @@ li {
                 padding: 20px 0;
                 // padding-bottom: 20px;
                 &.not-active::after {
-                  display: none;
+                  // display: block;
+                  opacity: 0;
                   content: " ";
                   position: absolute;
                   z-index: 10;
@@ -282,7 +305,8 @@ li {
                   left: 40%;
                   bottom: 0px;
                   background-color: $bg-c1-pink;
-                  transform: scale(1.4);
+                  transform: scale(0);
+                  transition: all 0.5s;
                 }
                 &.active::after {
                   display: block;
@@ -308,11 +332,13 @@ li {
                 transition: all 0.5s;
                 &.special {
                   width: calc(198 * 3px) !important;
-                  display: flex;
+                  // display: flex;
+                  display: none;
                   left: 0;
                   z-index: 5;
                   &.s2 {
                     left: 50%;
+                    
                   }
                   .submenu {
                     width: 198px;
@@ -327,6 +353,7 @@ li {
                   -webkit-box-shadow: 0px 0px 24px -3px rgba(0, 0, 0, 0.44);
                   -moz-box-shadow: 0px 0px 24px -3px rgba(0, 0, 0, 0.44);
                   padding: 20px;
+                  
                   &.right {
                     li {
                       display: flex;
@@ -404,7 +431,8 @@ li {
 }
 
 .about {
-  max-width: 100%;
+  // max-width: 1440px;
+  width: 100%;
   // height: 487px;
   background: url(../img/Violet_top_left_wave.png);
   background-repeat: no-repeat;
@@ -415,8 +443,9 @@ li {
     height: auto;
   }
   .container {
-    position: relative;
-    top: -150px;
+    // max-width: 1280px;
+    // position: relative;
+    
     object-fit: cover;
     @media only screen and (max-width: 992px) {
       top: 0;
@@ -435,12 +464,18 @@ li {
           }
           h1 {
             @include text($text-xl-2, $text-weight-7, $text-c1-dark);
+            @media only screen and (max-width: 1200px) {
+              @include text($text-lg-2, $text-weight-7, $text-c1-dark);
+            }
           }
         }
       }
     }
     .col2 {
+      
       img {
+        width: 100%;
+        
       }
     }
   }
@@ -463,18 +498,26 @@ li {
 }
 
 .teachers {
+  // max-width: 1440px;
+  width: 100%;
   background-color: #dcd1f0;
   .container-fluid {
     background: url(../img/Wave_White_bottom_right_shape_01.png);
     background-position: bottom;
     background-repeat: no-repeat;
+  
     .container {
+      // max-width: 1440px;
       .row {
         margin: auto;
         align-items: center;
+        gap: 0px;
         .col {
-          padding-bottom: 35px;
+          padding: 0 17px 35px 17px  !important;
+          // margin: 0 50px;
+          // overflow: hidden;
           .card {
+            width: 100% !important;
             border-radius: 15px;
             overflow: hidden;
             transition: all 0.5s;
@@ -500,9 +543,17 @@ li {
               }
               .name {
                 @include text($text-md-1, $text-weight-7, $text-c1-dark);
+
+                @media (min-width: 992px) and (max-width: 1200px) {
+                  @include text($text-sm-3, $text-weight-7, $text-c1-dark);
+                  
+                }
               }
               .card-text {
                 @include text($text-xs-1, $text-weight-5, $text-c1-dark);
+                margin: auto;
+                max-height: 36px;
+                max-width: 250px;
               }
             }
           }
@@ -512,15 +563,91 @@ li {
   }
 }
 
+.course{
+  .container-fluid{
+    background: url(../img/accent_bottom_wave_01.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: auto;
+    .container{
+      .row{
+        .col1{
+          img{}
+        }
+        .col2{
+          .form{
+            .title{
+              h1{}
+            }
+            .body{
+              .row1{
+                .name-form{
+                  .icon{
+                    i{}
+                  }
+                  .name{
+                    input{}
+                  }
+                }
+                .email-form{
+                  .icon{
+                    i{}
+                  }
+                  .email{
+                    input{}
+                  }
+                }
+              }
+
+              .row2{
+                .Eng-form{
+                  .icon{
+                    i{}
+                  }
+                  .Eng{
+                    select{
+                      option{}
+                    }
+                  }
+                }
+              }
+
+              .row3{
+                 .Mess-form{
+                  .icon{
+                    i{}
+                  }
+                  .Mess{
+                    textarea{
+
+                    }
+                  }
+                 }
+              }
+            }
+
+            .send{
+              a{}
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .footer {
+  // max-width: 1440px;
+  width: 100%;
   background-color: $bg-c1-purple;
   height: 530px;
   .container-fluid {
+    width: 100%;
     height: 100%;
     background: url(../img/footer_background.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 
     display: flex;
     flex-direction: column;
@@ -530,11 +657,14 @@ li {
         .row {
           color: $text-c1-light;
           .col {
+            @media screen {
+              
+            }
             .content {
               .footer-link {
                 h4 {
                   @include text($text-md-2, $text-weight-7, $text-c1-light);
-                  padding-bottom: 20px;
+                  padding: 30px 0;
                 }
                 .ft-link {
                   padding: 0;
@@ -575,7 +705,7 @@ li {
               }
               h4{
                 @include text($text-md-2, $text-weight-7, $text-c1-light);
-                padding-bottom: 20px;
+                padding: 30px 0;
               }
               .list {
                 .ft-link {
@@ -601,10 +731,32 @@ li {
                   margin: 0;
                   li{
                     input{
-  
+                      padding: 10px 0;
+                      @include text($text-xs-3, $text-weight-5, $text-c1-light);
+                      background-color: $bg-c1-purple;
+                      border: 1px solid rgba(173, 216, 230, 0.377);
+                      border-radius: 30px;
+                      text-align: center;
+                      &::placeholder{
+                        color: $text-c1-light;
+                        text-align: center;
+                      }
+                      &:focus-visible{
+                        // outline: none;
+                        outline: $tertiary-color solid 1px;
+                      }
                     }
                     .subcribe{
-  
+                      // width: 204px;
+                      // text-align: center;
+                      margin-top: 20px;
+                      a{
+                        @include text($text-xs-3, $text-weight-5, $text-c1-dark);
+                        background-color: $tertiary-color;
+                        padding: 12px 48px;
+                        border-radius: 30px;
+                        border: 1px solid $tertiary-color;
+                      }
                     }
                   }
                 }
