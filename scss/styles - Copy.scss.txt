@@ -80,7 +80,6 @@ $tertiary-color: #fff;
   &:hover {
     color: $bgc;
     background-color: #fff;
-    box-shadow: 0 0 0 1px #b61984 inset;
     // animation: zoom 0.5s ease-out;
     // @keyframes zoom {
     //   0% {
@@ -167,7 +166,6 @@ li {
           30px,
           $bg-c1-pink
         );
-        box-shadow: 0 0 0 3em #b61984 inset;
         // transition: all 0.5s ease;
         i {
         }
@@ -209,21 +207,19 @@ li {
       }
     }
   }
-  .container{
-    // max-width: 1440px;
-    margin: auto;
+  .container-fluid{
+    max-width: 1440px;
+    margin: 0;
     position: absolute;
     z-index: 100;
     top: 0;
     left: 0;
     padding: 0;
-    margin: 0 100px;
     @media screen and (max-width: 1200px) {
       // position: static;
     }
     @media screen and (max-width: 992px) {
       position: static;
-      margin: 0;
       top: 0;
       left: 0;
     }
@@ -402,7 +398,6 @@ li {
                 30px,
                 $bg-c1-pink
               );
-              box-shadow: 0 0 0 3em #b61984 inset;
             }
             .social-media {
               .social-share {
@@ -570,154 +565,69 @@ li {
 
 .course{
   .container-fluid{
-    // width: 100%;
     background: url(../img/accent_bottom_wave_01.png);
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: contain;
+    background-size: auto;
     .container{
-      // border: 1px solid ;
-      
       .row{
         .col1{
-          padding-top: 50px;
           img{}
         }
         .col2{
-          padding-top: 50px;
-          .container{
-            box-shadow: 0px 0px 24px -3px rgba(0, 0, 0, 0.44);
-          -webkit-box-shadow: 0px 0px 24px -3px rgba(0, 0, 0, 0.44);
-          -moz-box-shadow: 0px 0px 24px -3px rgba(0, 0, 0, 0.44);
-          padding: 20px;
-          background-color: $tertiary-color;
-          border-radius: 10px;
-            .form{
-              
-              .content{
-                padding: 20px;
-                .title{
-                  text-align: center;
-                  h1{
-                    @include text($text-lg-2, $text-weight-7, $text-c1-dark);
+          .form{
+            .title{
+              h1{}
+            }
+            .body{
+              .row1{
+                .name-form{
+                  .icon{
+                    i{}
+                  }
+                  .name{
+                    input{}
                   }
                 }
-                .body{
-                  .row{
-                    padding-bottom: 20px;
+                .email-form{
+                  .icon{
+                    i{}
                   }
-                  .row1{
-                    .name-form{
-                      padding-left: 0;
-                      .form-control{
-                        border-radius: 30px;
-                        .icon{
-                          color: $text-c1-pink;
-                          i{
-                            
-                          }
-                        }
-                        .name{
-                          input{
-                            border: none;
-                            width: 130px;
-                            &:focus-visible{
-                              // outline: none;
-                              outline: $tertiary-color solid 1px;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    .email-form{
-                      padding-right: 0;
-                      .form-control{
-                        border-radius: 30px;
-                        .icon{
-                          color: $text-c1-pink;
-                          i{
-                            
-                          }
-                        }
-                        .email{
-                          input{
-                            border: none;
-                            width: 130px;
-                            &:focus-visible{
-                              // outline: none;
-                              outline: $tertiary-color solid 1px;
-                            }
-                          }
-                        }
-                      }
-                    }
+                  .email{
+                    input{}
                   }
-    
-                  .row2{
-                    .Eng-form{
-                      border-radius: 30px;
-                      // display: flex;
-                      // justify-content: space-between;
-                      .icon{
-                        color: $text-c1-pink;
-                        i{
-                          
-                        }
-                      }
-                      .Eng{
-                        select{
-                          border: none;
-                          option{
-                            
-                          }
-                        }
-                      }
-                    }
-                  }
-    
-                  .row3{
-                     .Mess-form{
-                      border-radius: 20px;
-                      .icon{
-                        position: relative;
-                        top: -80px;
-                        color: $text-c1-pink;
-                        i{
-                          
-                        }
-                      }
-                      .Mess{
-                        textarea{
-                          &:focus-visible{
-                            // outline: none;
-                            outline: $tertiary-color solid 1px;
-                          }
-                        }
-                      }
-                     }
-                  }
-                }
-    
-                .send{
-                  padding: 30px 0;
-                 .button{
-                 
-                  a{
-                    // margin: 0 10px;
-                    @include text($text-xs-2, $text-weight-6, $text-c1-light);
-                    @include button(
-                      $text-c1-light,
-                      $bg-c1-pink,
-                      15px 50px,
-                      30px,
-                      $bg-c1-pink
-                    );
-                    box-shadow: 0 0 0 3em #b61984 inset;
-                  }
-                 }
-                  
                 }
               }
+
+              .row2{
+                .Eng-form{
+                  .icon{
+                    i{}
+                  }
+                  .Eng{
+                    select{
+                      option{}
+                    }
+                  }
+                }
+              }
+
+              .row3{
+                 .Mess-form{
+                  .icon{
+                    i{}
+                  }
+                  .Mess{
+                    textarea{
+
+                    }
+                  }
+                 }
+              }
+            }
+
+            .send{
+              a{}
             }
           }
         }
@@ -841,18 +751,11 @@ li {
                       // text-align: center;
                       margin-top: 20px;
                       a{
-                        @include text($text-xs-2, $text-weight-6, $text-c1-dark);
+                        @include text($text-xs-3, $text-weight-5, $text-c1-dark);
                         background-color: $tertiary-color;
-                        padding: 12px 51px;
+                        padding: 12px 48px;
                         border-radius: 30px;
                         border: 1px solid $tertiary-color;
-                        box-shadow: 0 0 0 0px #b61984 inset;
-                        transition: all 0.5s ease;
-                        &:hover{
-                          box-shadow: 0 0 0 3em #b61984 inset;
-                          color: $text-c1-light;
-                        }
-                        
                       }
                     }
                   }
