@@ -655,7 +655,9 @@ li {
                   }
     
                   .row2{
+                    padding-bottom: 0;
                     .Eng-form{
+                      
                       border-radius: 30px;
                       // display: flex;
                       // justify-content: space-between;
@@ -668,6 +670,10 @@ li {
                       .Eng{
                         select{
                           border: none;
+                          &:focus-visible{
+                            // outline: none;
+                            outline: $tertiary-color solid 1px;
+                          }
                           option{
                             
                           }
