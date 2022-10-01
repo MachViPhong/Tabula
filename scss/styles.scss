@@ -677,10 +677,13 @@ li {
     
                   .row3{
                      .Mess-form{
-                      border-radius: 20px;
+                      // border-radius: 20px;
+                      padding: 0;
+                      border: none;
                       .icon{
                         position: relative;
-                        top: -80px;
+                        top: 33px;
+                        left: 10px;
                         color: $text-c1-pink;
                         i{
                           
@@ -688,6 +691,7 @@ li {
                       }
                       .Mess{
                         textarea{
+                          padding-left: 30px;
                           &:focus-visible{
                             // outline: none;
                             outline: $tertiary-color solid 1px;

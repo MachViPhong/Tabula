@@ -510,12 +510,17 @@ li {
   border: none;
 }
 .course .container-fluid .container .row .col2 .container .form .content .body .row3 .Mess-form {
-  border-radius: 20px;
+  padding: 0;
+  border: none;
 }
 .course .container-fluid .container .row .col2 .container .form .content .body .row3 .Mess-form .icon {
   position: relative;
-  top: -80px;
+  top: 33px;
+  left: 10px;
   color: #b61984;
+}
+.course .container-fluid .container .row .col2 .container .form .content .body .row3 .Mess-form .Mess textarea {
+  padding-left: 30px;
 }
 .course .container-fluid .container .row .col2 .container .form .content .body .row3 .Mess-form .Mess textarea:focus-visible {
   outline: #fff solid 1px;
